@@ -18,7 +18,8 @@ half_add_sub.v	Arithmetic-circuit RTL
 half_add_sub_tb.v	Stimulus and VCD generation
 
 ### Verilog Program
-```module half_adder (
+```
+module half_adder (
     input  wire A,
     input  wire B,
     output wire Sum,
@@ -36,10 +37,12 @@ module half_subtractor (
 );
     assign Diff   = A ^ B;      // XOR
     assign Borrow = (~A) & B;  // A' . B
-endmodule```
+endmodule
+```
 
 ### Testbench Program
-```module tb3;
+```
+module tb3;
     reg A, B;
     wire Sum, Carry;
     wire Diff, Borrow;
@@ -75,7 +78,8 @@ endmodule```
  
         #10 $finish;
     end
-endmodule```
+endmodule
+```
 
 ### Truth Table
 
